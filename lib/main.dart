@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesappv2/Screens/HomeScreen.dart';
+import 'package:notesappv2/viwes/Notes_viwe.dart';
 
 void main(List<String> args) {
   runApp(const notesAppv2());
@@ -10,10 +10,11 @@ class notesAppv2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-      routes: {},
+      theme: ThemeData(brightness: Brightness.dark),
+      home: const Notes_viwe(),
+      routes: const {},
     );
   }
 }
