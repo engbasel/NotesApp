@@ -14,36 +14,38 @@ class AddNoteBottomSheet extends StatelessWidget {
       ),
       child: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            SizedBox(height: 15),
-            Text(
-              'Note',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            Divider(
-              color: Colors.white,
-              thickness: 1,
-              endIndent: 150,
-              // height: 5,
-              indent: 150,
-            ),
-            SizedBox(height: 15),
-            CustomTextField(
-              label: 'Title',
-              hintText: 'Title',
-              maxLines: 1,
-            ),
-            SizedBox(height: 30),
-            CustomTextField(
-              label: 'content',
-              hintText: 'content',
-              maxLines: 10,
-            ),
-            SizedBox(height: 30),
-            CoustomButton(text: 'save'),
-            SizedBox(height: 30),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 15),
+              Text(
+                'Note',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Divider(
+                color: Colors.white,
+                thickness: 1,
+                endIndent: 150,
+                // height: 5,
+                indent: 150,
+              ),
+              SizedBox(height: 15),
+              CustomTextField(
+                label: 'Title',
+                hintText: 'Title',
+                maxLines: 1,
+              ),
+              SizedBox(height: 30),
+              CustomTextField(
+                label: 'content',
+                hintText: 'content',
+                maxLines: 10,
+              ),
+              SizedBox(height: 30),
+              CoustomButton(text: 'save'),
+              SizedBox(height: 30),
+            ],
+          ),
         ),
       ),
     );
