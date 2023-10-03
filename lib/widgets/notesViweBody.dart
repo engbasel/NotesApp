@@ -42,6 +42,9 @@ class notesviewbody extends StatelessWidget {
               NoteItem(),
               NoteItem(),
               NoteItem(),
+              NoteItem(),
+              NoteItem(),
+              NoteItem(),
             ],
           ))
         ],

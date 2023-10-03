@@ -26,45 +26,47 @@ class NoteItem extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Flutter tips: build your career with Tharwat Samy",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-                const SizedBox(height: 15),
-                const Text(
-                  "Flutter tips: build your career with Tharwat Samy",
-                  style: TextStyle(
-                      fontSize: 15,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Flutter tips: build your career with Tharwat Samy",
+                    style: TextStyle(
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey),
-                ),
-                const SizedBox(height: 15),
-                const SizedBox(height: 10),
-                const Text(
-                  "May 21, 2022",
-                  style: TextStyle(fontSize: 12),
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    IconButton(
-                      icon: const Icon(
-                        Icons.delete,
-                        size: 40,
-                      ),
-                      onPressed: () {},
+                      color: Colors.black,
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  const SizedBox(height: 15),
+                  const Text(
+                    "Flutter tips: build your career with Tharwat Samy",
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey),
+                  ),
+                  const SizedBox(height: 15),
+                  const SizedBox(height: 10),
+                  const Text(
+                    "May 21, 2022",
+                    style: TextStyle(fontSize: 12),
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      IconButton(
+                        icon: const Icon(
+                          Icons.delete,
+                          size: 40,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
