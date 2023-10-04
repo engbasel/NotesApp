@@ -11,12 +11,18 @@ class SimpleBlocobserver implements BlocObserver {
 
   @override
   void onClose(BlocBase bloc) {
-    // TODO: implement onClose
+    print('----------');
+
+    debugPrint('close = $bloc');
+    print('----------');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    // TODO: implement onCreate
+    print('----------');
+
+    debugPrint('create = $bloc');
+    print('----------');
   }
 
   @override

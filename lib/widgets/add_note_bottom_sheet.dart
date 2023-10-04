@@ -16,30 +16,33 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(0, 10, 173, 222),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: BlocConsumer<AddNotesCubit, AddNoteState>(
-          listener: (context, state) {
-            if (state is AddNoteFai1ure) {
-              print('================');
-              print('failed the exption is ${state.errMessage}');
-              print('================');
-            }
-            if (state is AddNoteSuccess) {
-              Navigator.pop(context);
-            }
-          },
-          builder: (context, state) {
-            return ModalProgressHUD(
-              inAsyncCall: state is AddNoteLoading ? true : false,
-              child: const SingleChildScrollView(child: AddNoteForm()),
-            );
-          },
+    return BlocProvider(
+      create: (context) => AddNotesCubit(),
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(0, 10, 173, 222),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: BlocConsumer<AddNotesCubit, AddNoteState>(
+            listener: (context, state) {
+              if (state is AddNoteFai1ure) {
+                print('================');
+                print('failed the exption is ${state.errMessage}');
+                print('================');
+              }
+              if (state is AddNoteSuccess) {
+                Navigator.pop(context);
+              }
+            },
+            builder: (context, state) {
+              return ModalProgressHUD(
+                inAsyncCall: state is AddNoteLoading ? true : false,
+                child: const SingleChildScrollView(child: AddNoteForm()),
+              );
+            },
+          ),
         ),
       ),
     );
