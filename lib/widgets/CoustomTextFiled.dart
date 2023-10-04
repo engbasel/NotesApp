@@ -17,19 +17,19 @@ class CustomTextField extends StatelessWidget {
         return null;
       },
       maxLines: maxLines,
-      cursorColor: KPrimaryColor,
+      cursorColor: Kprimarycolor,
       decoration: InputDecoration(
         label: Text(label),
         labelStyle: const TextStyle(
-          color: KPrimaryColor,
+          color: Kprimarycolor,
         ),
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: KPrimaryColor,
+          color: Kprimarycolor,
         ),
         border: buildCustomborders(),
         enabledBorder: buildCustomborders(),
-        focusedBorder: buildCustomborders(KPrimaryColor),
+        focusedBorder: buildCustomborders(Kprimarycolor),
       ),
     );
   }
