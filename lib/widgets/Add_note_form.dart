@@ -58,29 +58,34 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLines: 10,
           ),
           const SizedBox(height: 30),
-          CoustomButton(
-            text: 'save',
-            ontap: () {
-              if (_formkey.currentState!.validate()) {
-                _formkey.currentState!.save();
-                var note = NoteModel(
-                  title: Title!,
-                  subTitle: subTitle!,
-                  date: DateTime.now().toString(),
-                  color: Kprimarycolor.value,
-                );
-                BlocProvider.of<AddNotesCubit>(context).addNote(note);
+          BlocBuilder<AddNotesCubit, AddNoteState>(
+            builder: (context, state) {
+              return CoustomButton(
+                isloading: state is AddNoteLoading ? true : false,
+                text: 'save',
+                ontap: () {
+                  if (_formkey.currentState!.validate()) {
+                    _formkey.currentState!.save();
+                    var note = NoteModel(
+                      title: Title!,
+                      subTitle: subTitle!,
+                      date: DateTime.now().toString(),
+                      color: Kprimarycolor.value,
+                    );
+                    BlocProvider.of<AddNotesCubit>(context).addNote(note);
 
-                print('===========Form key stat=============');
-                print(_formkey.currentState.toString());
-                print('===========Form key=============');
-                print(_formkey.toString());
-              } else {
-                autovalidat = AutovalidateMode.always;
-                print('===========No Data =============');
+                    print('===========Form key stat=============');
+                    print(_formkey.currentState.toString());
+                    print('===========Form key=============');
+                    print(_formkey.toString());
+                  } else {
+                    autovalidat = AutovalidateMode.always;
+                    print('===========No Data =============');
 
-                setState(() {});
-              }
+                    setState(() {});
+                  }
+                },
+              );
             },
           ),
           const SizedBox(height: 30),

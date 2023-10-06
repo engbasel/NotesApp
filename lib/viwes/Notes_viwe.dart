@@ -13,6 +13,7 @@ class Notes_viwe extends StatelessWidget {
             borderRadius: BorderRadiusDirectional.circular(16)),
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),

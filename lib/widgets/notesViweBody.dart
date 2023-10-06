@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notesappv2/widgets/Coustom_note_item.dart';
+import 'package:notesappv2/widgets/NotesViweList.dart';
 
 class notesviewbody extends StatelessWidget {
   const notesviewbody({
@@ -33,21 +34,8 @@ class notesviewbody extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(height: 15),
-          Expanded(
-              child: ListView(
-            children: const [
-              NoteItem(),
-              NoteItem(),
-              NoteItem(),
-              NoteItem(),
-              NoteItem(),
-              NoteItem(),
-            ],
-          ))
-        ],
+      body: const Column(
+        children: [SizedBox(height: 15), Expanded(child: NotesViweList())],
       ),
     );
   }
