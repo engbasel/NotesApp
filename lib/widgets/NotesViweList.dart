@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notesappv2/Cubits/notesCubit/notescubite_cubit.dart';
+import 'package:notesappv2/models/note_model.dart';
 import 'package:notesappv2/widgets/Coustom_note_item.dart';
 
 class NotesViweList extends StatelessWidget {
@@ -6,8 +9,15 @@ class NotesViweList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemBuilder: (context, index) {
-      return const NoteItem();
-    });
+    List<NoteModel> notes = BlocProvider.of<NotesCubite>(context).notes ?? [];
+    return BlocBuilder<NotesCubite, NotesState>(
+      builder: (context, state) {
+        return ListView.builder(
+            itemCount: notes.length,
+            itemBuilder: (context, index) {
+              return const NoteItem();
+            });
+      },
+    );
   }
 }

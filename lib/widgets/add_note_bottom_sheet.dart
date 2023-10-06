@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:notesappv2/add_note_cubit/add_notes_cubit.dart';
+import 'package:notesappv2/Cubits/add_note_cubit/add_notes_cubit.dart';
 import 'package:notesappv2/widgets/Add_note_form.dart';
 
 class AddNoteBottomSheet extends StatefulWidget {
