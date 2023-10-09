@@ -1,9 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
+import 'package:notesappv2/models/note_model.dart';
 import 'package:notesappv2/viwes/EditNoteViwe.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  const NoteItem({
+    Key? key,
+    required this.note,
+  }) : super(key: key);
 
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,7 +29,7 @@ class NoteItem extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            color: const Color(0xffffecd7d),
+            color: Color(note.color),
           ),
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -30,27 +37,27 @@ class NoteItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Flutter tips: build your career with Tharwat Samy",
-                    style: TextStyle(
+                  Text(
+                    note.title,
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
                   const SizedBox(height: 15),
-                  const Text(
-                    "Flutter tips: build your career with Tharwat Samy",
-                    style: TextStyle(
+                  Text(
+                    note.subTitle,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.grey),
                   ),
                   const SizedBox(height: 15),
                   const SizedBox(height: 10),
-                  const Text(
-                    "May 21, 2022",
-                    style: TextStyle(fontSize: 12),
+                  Text(
+                    note.date,
+                    style: const TextStyle(fontSize: 12),
                   ),
                   const SizedBox(height: 10),
                   Row(

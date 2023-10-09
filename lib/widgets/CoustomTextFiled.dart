@@ -24,19 +24,19 @@ class CustomTextField extends StatelessWidget {
         return null;
       },
       maxLines: maxLines,
-      cursorColor: Kprimarycolor,
+      cursorColor: KitemsColor,
       decoration: InputDecoration(
         label: Text(label),
         labelStyle: const TextStyle(
-          color: Kprimarycolor,
+          color: KitemsColor,
         ),
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: Kprimarycolor,
+          color: KitemsColor,
         ),
         border: buildCustomborders(),
         enabledBorder: buildCustomborders(),
-        focusedBorder: buildCustomborders(Kprimarycolor),
+        focusedBorder: buildCustomborders(KitemsColor),
       ),
     );
   }

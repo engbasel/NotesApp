@@ -22,7 +22,7 @@ class CoustomButton extends StatelessWidget {
         height: 55,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Kprimarycolor,
+          color: KitemsColor,
         ),
         child: Center(
           child: isloading

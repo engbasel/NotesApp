@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notesappv2/Cubits/notesCubit/notescubite_cubit.dart';
 import 'package:notesappv2/widgets/NotesViweList.dart';
 
-class notesviewbody extends StatelessWidget {
+class notesviewbody extends StatefulWidget {
   const notesviewbody({
     super.key,
   });
+
+  @override
+  State<notesviewbody> createState() => _notesviewbodyState();
+}
+
+class _notesviewbodyState extends State<notesviewbody> {
+  @override
+  void initState() {
+    BlocProvider.of<Notescubite>(context).fetchAllNotes();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

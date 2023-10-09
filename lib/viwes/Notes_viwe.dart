@@ -11,7 +11,7 @@ class Notes_viwe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NotesCubite(),
+      create: (context) => Notescubite(),
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           shape: RoundedRectangleBorder(
