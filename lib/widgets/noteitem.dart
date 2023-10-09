@@ -66,6 +66,7 @@ class NoteItem extends StatelessWidget {
                       IconButton(
                         icon: const Icon(
                           Icons.delete,
+                          color: Colors.black,
                           size: 40,
                         ),
                         onPressed: () {},
