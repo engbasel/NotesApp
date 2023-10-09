@@ -9,9 +9,10 @@ class NotesViweList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<NoteModel> notes = BlocProvider.of<Notescubite>(context).notes ?? [];
-    return BlocBuilder<Notescubite, NotesState>(
+    return BlocBuilder<NotesCubite, NotesState>(
       builder: (context, state) {
+        List<NoteModel> notes = BlocProvider.of<NotesCubite>(context).notes!;
+
         return ListView.builder(
             itemCount: notes.length,
             itemBuilder: (context, index) {

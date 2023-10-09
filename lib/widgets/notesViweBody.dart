@@ -14,8 +14,8 @@ class notesviewbody extends StatefulWidget {
 
 class _notesviewbodyState extends State<notesviewbody> {
   @override
-  void initState() {
-    BlocProvider.of<Notescubite>(context).fetchAllNotes();
+  initState() {
+    BlocProvider.of<NotesCubite>(context).fetchAllNotes();
     super.initState();
   }
 
@@ -47,7 +47,12 @@ class _notesviewbodyState extends State<notesviewbody> {
         ),
       ),
       body: const Column(
-        children: [SizedBox(height: 15), Expanded(child: NotesViweList())],
+        children: [
+          SizedBox(height: 15),
+          Expanded(
+            child: NotesViweList(),
+          ),
+        ],
       ),
     );
   }
