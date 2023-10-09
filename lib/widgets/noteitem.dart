@@ -64,12 +64,14 @@ class NoteItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       IconButton(
+                        onPressed: () {
+                          note.delete();
+                        },
                         icon: const Icon(
                           Icons.delete,
                           color: Colors.black,
                           size: 40,
                         ),
-                        onPressed: () {},
                       ),
                     ],
                   ),
