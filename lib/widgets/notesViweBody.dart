@@ -25,24 +25,26 @@ class _notesviewbodyState extends State<notesviewbody> {
       appBar: AppBar(
         backgroundColor: const Color(0x0005b3e9),
         elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(top: 10, right: 10),
-            child: Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                color: const Color(0xfff3b3b3b),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: const Icon(Icons.search),
+        // actions: [
+        //   Padding(
+        //     padding: const EdgeInsets.only(top: 10, right: 10),
+        //     child: Container(
+        //       width: 50,
+        //       height: 50,
+        //       decoration: BoxDecoration(
+        //         color: const Color(0xfff3b3b3b),
+        //         borderRadius: BorderRadius.circular(15),
+        //       ),
+        //       child: const Icon(Icons.search),
+        //     ),
+        //   ),
+        // ],
+        title: const Center(
+          child: Text(
+            'Notes',
+            style: TextStyle(
+              color: Colors.white,
             ),
-          ),
-        ],
-        title: const Text(
-          'Notes',
-          style: TextStyle(
-            color: Colors.white,
           ),
         ),
       ),
