@@ -13,13 +13,32 @@ class NotesViweList extends StatelessWidget {
       builder: (context, state) {
         List<NoteModel> notes = BlocProvider.of<NotesCubite>(context).notes!;
 
-        return ListView.builder(
+        if (notes.isEmpty) {
+          return const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // SizedBox(height: 50),
+              Center(
+                  child: Text(
+                '     No Notes yet ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                ),
+              )),
+            ],
+          );
+        } else {
+          return ListView.builder(
             itemCount: notes.length,
             itemBuilder: (context, index) {
               return NoteItem(
                 note: notes[index],
               );
-            });
+            },
+          );
+        }
       },
     );
   }
