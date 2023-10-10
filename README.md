@@ -22,3 +22,31 @@ MyNotes comes with the following features:
 <hr/>
 
 ## can take fast viwe to see sereens in MyNotes app 
+
+![Screenshot_2023-10-10-12-56-58-01_6098f88cd6c0a2bcd99405bcb73c1de7](https://github.com/engbasel/NotesApp/assets/88496239/6cddbb67-d24f-49df-a5c5-f5776301d34c)
+
+
+
+<hr/>
+
+
+![Screenshot_2023-10-10-12-57-08-99_6098f88cd6c0a2bcd99405bcb73c1de7](https://github.com/engbasel/NotesApp/assets/88496239/f1bd2e58-327d-4b98-aab1-1ae9cf338516)
+
+
+<hr/>
+
+![Screenshot_2023-10-10-12-57-43-85_6098f88cd6c0a2bcd99405bcb73c1de7](https://github.com/engbasel/NotesApp/assets/88496239/243f2994-0a38-4e10-81dd-32b03395b72f)
+
+
+
+<hr/>
+
+![Screenshot_2023-10-10-12-57-53-52_6098f88cd6c0a2bcd99405bcb73c1de7](https://github.com/engbasel/NotesApp/assets/88496239/d88f57c5-b6e5-4905-b862-c935182b5e9c)
+
+
+<hr/>
+
+![Screenshot_2023-10-10-12-58-15-26_6098f88cd6c0a2bcd99405bcb73c1de7](https://github.com/engbasel/NotesApp/assets/88496239/d17aafc1-a2e7-441d-846e-9bd370fa946b)
+
+<hr/>
+
